@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    text-align: center;
+    font-family: cursive, sans-serif;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+section {
+    position: relative;
+    display: inline-block;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding-left: 12px;
+    padding-bottom: 8px;
+    margin: 1%;
+}
+
+section > span {
+    position: relative;
+    /* by default span is an inline element and such elements have no width and height */
+    /* also the vertical margin do not work & vertical paddings may overlap */
+    display: inline-block;
+    box-sizing: border-box;
+    width: 112px;
+    height: 32px;
+    left: calc(100% - 112px);
+    /* instead of 'display: inline-block' and 'left: calc(...)' we could've used 'float: right;' */
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-family: cursive, sans-serif;
+}
+
+section > p {
+    margin: 0px;
+}
+.sec-1 > span {
+    background-color: lightcoral;
+}
+.sec-2 > span {
+    background-color: brown;
+    color: white;
+}
+.sec-3 > span {
+    background-color: palegoldenrod;
+}
+
+section > p {
+    top: 2em;
+}
+
+@media screen and (min-width: 992px) {
+    section.sec-1 {
+        width: 30%;
+        margin-left: 2.1%;
+        margin-right: 0.6%;
+    }
+    section.sec-2 {
+        width: 30%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    section.sec-3 {
+        width: 30%;
+        margin-left: 0.6%;
+        margin-right: 0.6%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    h2 {margin-bottom: 1em;}
+    section.sec-1 {
+        float: left;
+        width: 45%;
+        margin-right: 1%;
+        /* margin-left: 1.2%;
+        margin-right: 1.2%; */
+    }
+    section.sec-2 {
+        float: right;
+        width: 45%;
+        margin-left: 0;
+        /* margin-left: 1.2%;
+        margin-right: 1.2%; */
+    }
+    section.sec-3 {
+        clear: both;
+        margin-top: 1.2em;
+        /* display: block;
+        margin-left: 1.2%;
+        margin-right: 1.2%; */
+    }
+}
+@media screen and (max-width: 767px) {
+    h2 {margin-bottom: 2em;}
+    section.sec-1 {
+        margin: auto;
+        margin-bottom: 2%;
+        width: 84%;
+        display: block;
+    }
+    section.sec-2 {
+        margin: auto;
+        margin-bottom: 2%;
+        width: 84%;
+        display: block;
+    }
+    section.sec-3 {
+        margin: auto;
+        margin-bottom: 2%;
+        width: 84%;
+        display: block;
+    }
+}
