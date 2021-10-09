@@ -20,31 +20,19 @@ nav.navbar.navbar-light.bg-light {
     /* Exact 0.5rem still had a very thin background revealing so 0.6rem fixed that */
 }
 #navbarNavAltMarkup.navbar-collapse .nav-link {
-    text-align: center;
     font-size: 1.2em;
     color: black;
     font-family: cursive, Arial, Helvetica, sans-serif;
     border-bottom: 1px solid lightgray;
 }
 
-h2.text-center {
+h2 {
     font-family: cursive, sans-serif;
     font-weight: 900;
     margin-bottom: 3em;
 }
 
 .container-fluid > .row > div > .my-content > .section-title {
-    position: relative;
-    /* by default span is an inline element and such elements have no width and height */
-    /* also the vertical margin do not work & vertical paddings may overlap */
-    display: inline-block;
-    box-sizing: border-box;
-    width: 112px;
-    height: 32px;
-    left: calc(50% - 56px); /* To center the title we simply had to do half of calc(100% - 112px) [which would have thrown it to extreme right]; */
-    /* Also if we used calc(50% - 112px) then the element would be off from the center by 56px (1/2 of 112px) */
-    /* instead of 'display: inline-block' and 'left: calc(...)' we could've used 'float: right;' */
-    text-align: center;
     font-weight: bold;
     margin-bottom: 12px;
     font-family: cursive, Arial, Helvetica, sans-serif;
@@ -57,15 +45,11 @@ h2.text-center {
 
 .my-content > a {
     color: whitesmoke;
-    position: relative;
-    left: calc(100% - 106.73px);
     font-style: italic;
     text-decoration: none;
 }
 .my-content > a:hover, a:active{
     color: whitesmoke;
-    position: relative;
-    left: calc(100% - 106.73px);
     font-style: italic;
     text-decoration: underline;
 }
