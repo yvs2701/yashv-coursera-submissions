@@ -45,12 +45,13 @@ h2 {
 
 .my-content > a {
     color: whitesmoke;
+    position: relative;
+    left: calc(100% - 106.73px);
     font-style: italic;
     text-decoration: none;
 }
 .my-content > a:hover, a:active{
     color: whitesmoke;
-    font-style: italic;
     text-decoration: underline;
 }
 
